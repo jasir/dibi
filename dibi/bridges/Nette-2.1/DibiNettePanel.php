@@ -144,7 +144,7 @@ class DibiNettePanel extends DibiObject implements IBarPanel
 				if (!class_exists($helpers)) {
 					$helpers = class_exists('NDebugHelpers') ? 'NDebugHelpers' : 'DebugHelpers';
 				}
-				$s .= call_user_func(array($helpers, 'editorLink'), $event->source[0], $event->source[1])->class('nette-DibiProfiler-source');
+				//$s .= call_user_func(array($helpers, 'editorLink'), $event->source[0], $event->source[1])->class('nette-DibiProfiler-source');
 			}
 
 			$s .= "</td><td>{$event->count}</td><td>{$h($event->connection->getConfig('driver') . '/' . $event->connection->getConfig('name'))}</td></tr>";
